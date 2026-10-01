@@ -1,0 +1,5 @@
+*{box-sizing:border-box}
+body{margin:0;width:100%;height:100vh;height:100dvh;display:grid;place-items:center;overflow:hidden;background:#030405}
+main{width:100%;max-width:1100px;width:min(calc(100vw - 24px),calc((100vh - 24px)*1.6),1100px);width:min(calc(100vw - 24px),calc((100dvh - 24px)*1.6),1100px)}
+
+#princesa-luz-conectada{position:relative;background:#030405;color:#e5c67d;width:100%;overflow:hidden}#princesa-luz-conectada canvas{display:block;width:100%;height:auto;image-rendering:pixelated}#princesa-luz-conectada .loading{position:absolute;left:0;right:0;top:65%;text-align:center;font:14px monospace;color:#e5c67d}
