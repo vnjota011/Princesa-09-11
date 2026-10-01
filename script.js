@@ -2,7 +2,16 @@
 
 (()=>{
 const root=document.getElementById('princesa-luz-conectada'),canvas=root.querySelector('canvas'),ctx=canvas.getContext('2d');
-root.querySelector('audio').play().catch(()=>{});
+const audio=root.querySelector('audio');
+const startAudio=async()=>{
+ if(!audio)return;
+ audio.volume=0.25;
+ try{await audio.play();}catch(err){}
+};
+startAudio();
+['pointerdown','touchstart','keydown','click'].forEach((eventName)=>{
+ document.addEventListener(eventName, startAudio, {once:true, passive:true});
+});
 const princess=new Image();
 const font={
 '0':['01110','11011','11011','11011','11011','11011','01110'],
