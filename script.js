@@ -96,7 +96,7 @@ function finishLoading(){
 render();
 princess.onload=finishLoading;
 princess.onerror=()=>{const loading=root.querySelector('.loading');if(loading)loading.textContent='Não foi possível carregar a princesa.'};
-princess.src='assets/princesa-com-porquinho.webp';
+princess.src='assets/princesa.webp';
 if(princess.complete&&princess.naturalWidth)finishLoading();
 requestAnimationFrame(loop);
 })();
